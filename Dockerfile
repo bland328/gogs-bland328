@@ -1,5 +1,5 @@
 ## bland328/gogs-bland328 Dockerfile
-## Standard Gogs Docker container with tweaks
+## Standard Gogs Docker container (gogs/gogs) with tweaks
 
 FROM gogs/gogs:latest
 USER root
