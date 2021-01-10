@@ -10,7 +10,7 @@ USER root
 RUN echo 'git root=(root) NOPASSWD:/data/git/gogs-repositories/*/*/custom_hooks/*' >> /etc/sudoers
 
 # Install python3
-apk add python3
+RUN apk add python3
 
 # Install sudo
-apk add sudo
+RUN apk add sudo
