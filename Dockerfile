@@ -11,3 +11,6 @@ RUN echo 'git ALL=(ALL) NOPASSWD:SETENV:/data/git/gogs-repositories/*/*/custom_h
 RUN apk add python3
 RUN apk add sudo
 RUN apk add file
+
+# Make python3 available as python (gentle cheat without needing to install update-alternatives)
+RUN ln -fs python3 /usr/bin/python
