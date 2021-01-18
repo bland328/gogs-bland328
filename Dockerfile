@@ -8,9 +8,11 @@ USER root
 RUN echo 'git ALL=(ALL) NOPASSWD:SETENV:/data/git/gogs-repositories/*/*/custom_hooks/*' >> /etc/sudoers
 
 # Install packages
+RUN apk update
 RUN apk add python3
 RUN apk add sudo
 RUN apk add file
+RUN rm -rf /var/cache/apk/*
 
 # Make python3 available as python (gentle cheat without needing to install update-alternatives)
 RUN ln -fs python3 /usr/bin/python
