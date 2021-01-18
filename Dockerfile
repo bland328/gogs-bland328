@@ -10,6 +10,7 @@ RUN echo 'git ALL=(ALL) NOPASSWD:SETENV:/data/git/gogs-repositories/*/*/custom_h
 # Install packages
 RUN apk update
 RUN apk add python3
+# RUN apk add py3-pip  # may need this at some point, if pip3 disappears in future Python packages under Alpine
 RUN apk add sudo
 RUN apk add file
 RUN rm -rf /var/cache/apk/*
